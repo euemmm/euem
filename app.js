@@ -44,7 +44,7 @@ const start = async () => {
 
         await connection.connect()
 
-        app.listen(443, () => {
+        https.createServer(https_cert, app).listen(443, () => {
 
             console.log(`Server is listening on http port ${https_port}`)
 
