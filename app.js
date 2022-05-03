@@ -2,12 +2,19 @@ require('dotenv').config()
 
 const express = require('express')
 const app = express()
+const http = require('http')
+const https = require('https')
 
 const fs = require("fs");
 
+const https_cert = {
+    key: fs.readFileSync("./db/pem/key.pem"),
+    cert: fs.readFileSync("./db/pem/cert.pem"),
+}
 
 const connection = require('./db/connect')
 
+const http_port = process.env.HTTP_PORT
 const https_port = process.env.HTTPS_PORT
 
 app.use('/', function (req, res, next) {
@@ -36,7 +43,7 @@ const start = async () => {
 
         await connection.connect()
 
-        app.listen(https_port, () => {
+        https.createServer(https_cert, app).listen(443, () => {
 
             console.log(`Server is listening on http port ${https_port}`)
 
