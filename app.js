@@ -18,7 +18,7 @@ const http_port = process.env.HTTP_PORT
 const https_port = process.env.HTTPS_PORT
 
 app.use('/', function (req, res, next) {
-    return res.redirect('https://www.euem.net')
+    console.log(req.protocol)
 })
 
 const DBcheck = () => {
