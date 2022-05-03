@@ -17,7 +17,11 @@ const connection = require('./db/connect')
 const http_port = process.env.HTTP_PORT
 const https_port = process.env.HTTPS_PORT
 
-app.get('/', (req, res) => {
+app.use('/', function (req, res, next) {
+    res.redirect('https://www.euem.net')
+})
+
+const DBcheck = () => {
 
     connection.query('SELECT * FROM euem', function (error, results, fields) {
 
@@ -31,9 +35,7 @@ app.get('/', (req, res) => {
 
     });
 
-    return res.json({ success: true, data: ["hello world"] })
-
-})
+}
 
 const start = async () => {
 
