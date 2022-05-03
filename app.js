@@ -18,7 +18,7 @@ const http_port = process.env.HTTP_PORT
 const https_port = process.env.HTTPS_PORT
 
 app.use('/', function (req, res, next) {
-    console.log(req.protocol)
+    console.log(req.socket.remoteAddress)
     res.send("hello world")
 })
 
