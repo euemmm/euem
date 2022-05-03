@@ -8,8 +8,8 @@ const https = require('https')
 const fs = require("fs");
 
 const https_cert = {
-    key: fs.readFileSync("./db/pem/key.pem"),
-    cert: fs.readFileSync("./db/pem/cert.pem"),
+    key: fs.readFileSync("./pem/key.pem"),
+    cert: fs.readFileSync("./pem/cert.pem"),
 }
 
 const connection = require('./db/connect')
