@@ -19,7 +19,7 @@ const https_port = process.env.HTTPS_PORT
 
 app.use('/', function (req, res, next) {
     console.log(req.socket.remoteAddress)
-    res.send("hello world")
+    res.send("Hello World")
 })
 
 const DBcheck = () => {

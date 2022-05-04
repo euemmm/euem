@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "nodemon": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "pm2": "pm2 start ecosystem.config.js --only euem --env production"
   },
   "repository": {
     "type": "git",
