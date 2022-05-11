@@ -9,6 +9,4 @@ const connection = DB.createConnection({
 
 })
 
-
-
 module.exports = connection
