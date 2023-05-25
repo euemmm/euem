@@ -8,14 +8,15 @@ module.exports = {
     env : {                 
       NODE_ENV: 'development'
     }
-  },{
-		name: 'euem',                      
-		script: 'app.js',
-		watch: false,                       //서버의 파일이 수정되어도 재시작하지 않도록 false
-		autorestart: false,                  //자동으로 다시 시작하지 않도록 false
-		instances: 1,
-		env : {
-			NODE_ENV: 'production'
-		}
-	}]
+  }, {
+
+	name: 'euem-prod',
+	script: 'app.js',
+	watch: false,
+	autorestart: false,
+	instances: 1,
+	env : {
+	  NODE_ENV: 'production'
+	}
+  }]
 };

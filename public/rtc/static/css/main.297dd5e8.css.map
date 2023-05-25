@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.297dd5e8.css","mappings":"AAAA,MAEI,iBAAkB,CAClB,gBAAiB,CACjB,gBAGJ,CAEA,KACI,wBAAgC,CAAhC,+BACJ","sources":["styles.css"],"sourcesContent":[":root {\n\n    --bgColor: #e0e0e0;\n    --shadow: #bebebe;\n    --highlight: #fff;\n\n\n}\n\nbody {\n    background-color: var(--bgColor);\n}\n"],"names":[],"sourceRoot":""}
